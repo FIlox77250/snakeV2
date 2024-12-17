@@ -168,7 +168,7 @@ private final double MOVE_SPEED = 3.0; // Vitesse du serpent
 
 ## 📝 Licence
 
-MIT © [Votre Nom]
+MIT © Filox
 
 *Fait avec ❤️ et ☕*
 
