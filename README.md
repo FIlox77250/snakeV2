@@ -31,22 +31,40 @@
 
 <div align="center">
 
-### Contrôles
+### Menu Principal
+| Touche | Action |
+|--------|--------|
+| ↑ | Option précédente |
+| ↓ | Option suivante |
+| ENTRÉE | Sélectionner option |
+| ÉCHAP | Retour au menu |
 
+### Menu Difficulté
+| Touche | Action |
+|--------|--------|
+| ↑ | Difficulté précédente |
+| ↓ | Difficulté suivante |
+| ENTRÉE | Valider difficulté |
+| ÉCHAP | Retour au menu |
+
+### En Jeu
 | Touche | Action |
 |--------|--------|
 | ↑ | Déplacer vers le haut |
 | ↓ | Déplacer vers le bas |
 | ← | Déplacer vers la gauche |
 | → | Déplacer vers la droite |
-| ESPACE | Redémarrer le jeu |
+| P ou ÉCHAP | Pause |
+| ESPACE | Reprendre |
+| M | Son On/Off |
+| +/- | Volume |
 
 </div>
 
 ### Objectifs
 
 - 🍎 Mangez les pommes pour grandir
-- 📈 Chaque pomme = 1 point
+- 📈 Différents types de pommes = différents points
 - ⚠️ Évitez les murs et votre corps
 - 🏆 Battez votre meilleur score
 
@@ -87,12 +105,22 @@ graph LR
 
 </div>
 
-### Progression
+### Types de Pommes
+| Type | Couleur | Points | Effet |
+|------|---------|---------|-------|
+| Normale | Rouge | 1 | - |
+| Dorée | Jaune | 3 | - |
+| Vitesse | Verte | 1 | Vitesse x2 (5s) |
+| Lente | Bleue | 1 | Vitesse /2 (3s) |
+| Arc-en-ciel | Magenta | 2 | Score x2 (10s) |
 
-- 🟢 Démarrage avec 3 segments
-- 🔴 Chaque pomme augmente la taille
-- 📊 Score sauvegardé automatiquement
-- 🔄 Possibilité de rejouer instantanément
+### Niveaux de Difficulté
+| Niveau | Vitesse | Multiplicateur |
+|--------|---------|----------------|
+| Facile | x1.0 | x1.0 |
+| Normal | x1.5 | x1.2 |
+| Difficile | x2.0 | x1.5 |
+| Expert | x2.5 | x2.0 |
 
 ---
 
@@ -118,7 +146,7 @@ private final double MOVE_SPEED = 3.0; // Vitesse du serpent
 |---------|---------|-------------|
 | 🟢 Tête | Vert | Guide le serpent |
 | 🟡 Corps | Jaune | Suit la tête |
-| 🔴 Pomme | Rouge | Objectif à collecter |
+| 🔴 Pomme | Variable | Objectif à collecter |
 | ⚪ Score | Blanc | Affichage en haut |
 
 </div>
@@ -137,6 +165,16 @@ private final double MOVE_SPEED = 3.0; // Vitesse du serpent
 - Fichier de sauvegarde automatique
 - Format texte simple
 
+### Sons
+- Fichiers nécessaires :
+  ```
+  /src/sounds/
+  ├── move.wav   (75ms)
+  ├── eat.wav    (250ms)
+  ├── crash.wav  (600ms)
+  └── start.wav  (1.2s)
+  ```
+
 ---
 
 ## 💡 Astuces
@@ -146,8 +184,8 @@ private final double MOVE_SPEED = 3.0; // Vitesse du serpent
 | 🎮 Pour Bien Jouer | ⚡ Pour la Performance |
 |-------------------|----------------------|
 | Anticipez vos mouvements | Fermez les applications inutiles |
-| Évitez les virages serrés | Utilisez Java 8 ou supérieur |
 | Planifiez votre trajectoire | Vérifiez les droits d'écriture |
+| Utilisez les pommes spéciales | Utilisez Java 8 ou supérieur |
 
 </div>
 
@@ -155,12 +193,21 @@ private final double MOVE_SPEED = 3.0; // Vitesse du serpent
 
 ## 🔜 Futures Améliorations
 
-- [ ] Mode multijoueur
-- [ ] Effets sonores
-- [ ] Différents types de pommes
-- [ ] Niveaux de difficulté
-- [ ] Menu principal
-- [ ] Système de pause
+- [x] Menu principal
+- [x] Système de pause
+- [x] Effets sonores
+- [x] Différents types de pommes
+- [x] Niveaux de difficulté
+- [x] Sauvegarde des scores
+- [ ] Obstacles
+- [ ] Thèmes visuels
+- [ ] Classement en ligne
+- [ ] Mode survie
+- [ ] Power-ups supplémentaires
+- [ ] Mode défi
+- [ ] Tutoriel interactif
+- [ ] Achievements
+- [ ] Options de personnalisation
 
 ---
 
@@ -168,7 +215,7 @@ private final double MOVE_SPEED = 3.0; // Vitesse du serpent
 
 ## 📝 Licence
 
-MIT © Filox
+MIT © [Votre Nom]
 
 *Fait avec ❤️ et ☕*
 
