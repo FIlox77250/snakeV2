@@ -74,7 +74,7 @@
 
 ```bash
 # 1. Clonez le répertoire
-git clone https://github.com/votre-username/snake-game.git
+git clone https://github.com/Filox77250/snakeV2.git
 
 # 2. Accédez au dossier
 cd snake-game
